@@ -8,9 +8,14 @@ let tweetSchema = mongoose.Schema({
     required: requiredValidationMessage,
     maxlength: 140
   },
-  hashTags: [{
-    type: String
-  }],
+  tags: {
+    hashTags: [{
+      type: String
+    }],
+    userTags: [{
+      type: String
+    }]
+  },
   date: {
     type: Date,
     default: Date.now
